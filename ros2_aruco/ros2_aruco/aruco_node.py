@@ -71,9 +71,9 @@ class ArucoNode(Node):
             markers.header.stamp = msg.header.stamp
             markers.header.frame_id = self.camera_frame if self.camera_frame else msg.header.frame_id
             
-            print(rvecs)
-            print("------------")
-            print(tvecs)
+            # print(rvecs)
+            # print("------------")
+            # print(tvecs)
             for rvec, tvec in zip(rvecs, tvecs):
                 tvec = tvec.flatten()
                 rvec = rvec.flatten()
