@@ -47,7 +47,7 @@ class ArucoNode(Node):
     def info_callback(self, msg):
         self.intrinsic_mat = np.array(msg.k).reshape([3, 3])
         self.distortion_coeffs = np.array(msg.d)
-        self.get_logger().info('Camera info received and processed.')
+        # self.get_logger().info('Camera info received and processed.')
 
     def image_callback(self, msg):
         if self.intrinsic_mat is None or self.distortion_coeffs is None:
@@ -96,7 +96,7 @@ class ArucoNode(Node):
 
             self.poses_pub.publish(poses)
             self.markers_pub.publish(markers)
-            self.get_logger().info('Published ArUco marker poses.')
+            # self.get_logger().info('Published ArUco marker poses.')
     
 
 def my_estimatePoseSingleMarkers(corners, marker_size, mtx, distortion):
