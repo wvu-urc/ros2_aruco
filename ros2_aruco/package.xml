@@ -5,7 +5,7 @@
   <version>0.1.0</version>
   <description>ROS2 Aruco Marker Tracking</description>
   <maintainer email="nathan.r.sprague@gmail.com">Nathan Sprague</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
