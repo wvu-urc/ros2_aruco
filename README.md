@@ -62,3 +62,9 @@ optional arguments:
                  DICT_7X7_1000, DICT_7X7_250, DICT_7X7_50, DICT_ARUCO_ORIGINAL
                  (default: DICT_5X5_250)
 ```
+
+## Changes made by Team Mountaineers
+Made Adjustments to allow for a different version of opencv
+
+## Known Limitations
+These updates may not be functional, they were implemented and tested slightly, but the default package may have been used by the rover during the autonomy mission
