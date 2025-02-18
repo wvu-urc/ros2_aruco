@@ -16,8 +16,8 @@ class ArucoNode(Node):
                                 parameters=[
                                     ('marker_size', 0.15),
                                     ('aruco_dictionary_id', 'DICT_4X4_50'),
-                                    ('image_topic', '/video0/image_raw'),
-                                    ('camera_info_topic', '/video0/camera_info'),
+                                    ('image_topic', '/image_topic'),
+                                    ('camera_info_topic', '/camera_info'),
                                     ('camera_frame', '')
                                 ])
 
