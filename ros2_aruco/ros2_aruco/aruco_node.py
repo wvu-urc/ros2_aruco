@@ -74,7 +74,9 @@ class ArucoNode(Node):
             # print(rvecs)
             # print("------------")
             # print(tvecs)
-            for rvec, tvec in zip(rvecs, tvecs):
+            for i, vecs in enumerate(zip(rvecs, tvecs)):
+                rvec, tvec = vecs
+
                 tvec = tvec.flatten()
                 rvec = rvec.flatten()
                 pose = Pose()
@@ -92,7 +94,7 @@ class ArucoNode(Node):
 
                 poses.poses.append(pose)
                 markers.poses.append(pose)
-                markers.marker_ids.append(int(ids[0][0]))
+                markers.marker_ids.append(int(ids[i][0]))
 
             self.poses_pub.publish(poses)
             self.markers_pub.publish(markers)
