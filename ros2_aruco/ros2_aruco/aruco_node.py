@@ -31,7 +31,7 @@ class ArucoNode(Node):
         self.get_logger().info(f'Marker size set to: {self.marker_size} meters')
 
         self.info_sub = self.create_subscription(CameraInfo, camera_info_topic, self.info_callback, qos_profile_sensor_data)
-        self.image_sub = self.create_subscription(Image, image_topic, self.image_callback, qos_profile_sensor_data)
+        self.image_sub = self.create_subscription(Image, image_topic, self.image_callback, 1)
 
         self.poses_pub = self.create_publisher(PoseArray, 'aruco_poses', 10)
         self.markers_pub = self.create_publisher(ArucoMarkers, 'aruco_markers', 10)
