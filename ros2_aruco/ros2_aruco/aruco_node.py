@@ -84,8 +84,8 @@ class ArucoNode(Node):
                 rot_matrix[:3, :3], _ = cv2.Rodrigues(rvec)
                 quaternion = quaternion_from_matrix(rot_matrix)
 
-                pose.position.x = -tvec[1]
-                pose.position.y = tvec[0]
+                pose.position.x = tvec[0]
+                pose.position.y = tvec[1]
                 pose.position.z = tvec[2]
                 pose.orientation.x = quaternion[0]
                 pose.orientation.y = quaternion[1]
